@@ -38,7 +38,7 @@ body
 	opacity: 1
 	&.ishome
 		.site-header
-			min-height: 650px
+			min-height: 750px
 			height: 100vh
 			background-color: #121212
 			.top-line
@@ -95,6 +95,31 @@ section
 			background-color: #fff
 			color: #fff
 
+.mm-navbar
+	height: auto
+	position: relative
+	border: none
+	.mm-title
+		padding: 0
+		img
+			width: 135px
+			height: auto
+			margin: 10px 0 35px
+
+html .mm-opened
+	overflow-y: scroll
+
+//.mm-panels, 
+.mm-panels > .mm-panel
+	right: -18px
+
+.mm-panels > .mm-panel::after, 
+.mm-panels > .mm-panel::before
+	height: 0
+
+.mm-panels > .mm-panel > .mm-listview:first-child, 
+.mm-panels > .mm-panel > .mm-navbar + .mm-listview
+	margin-top: 0
 
 
 @import "media"
