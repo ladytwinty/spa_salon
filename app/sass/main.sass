@@ -36,12 +36,13 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
-	color: #fff
+	//color: #fff
 	&.ishome
 		.site-header
 			min-height: 750px
 			height: 100vh
 			background-color: #121212
+			color: #fff
 			.top-line
 				padding-top: 40px
 				position: absolute
@@ -260,7 +261,9 @@ html .mm-opened
 	.phone-h
 		text-align: center
 
-
-
+$colors: $blue, $red, $accent
+@for $i from 1 through length($colors) 
+	.carousel-servises .owl-item:nth-child(#{length($colors)}n+#{$i})
+		background-color: nth($colors, $i)
 
 @import "media"
