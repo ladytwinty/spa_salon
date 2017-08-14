@@ -29,7 +29,9 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/mmenu/jquery.mmenu.js',
 		'app/libs/owl/owl.carousel.min.js',
-		'app/js/common.min.js', // Всегда в конце
+		'app/libs/equalHeights/jquery.equalheights.js',
+		'app/libs/fotorama/fotorama.js',
+		'app/js/common.min.js',
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)

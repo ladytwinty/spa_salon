@@ -29,6 +29,7 @@ $(document).ready(function() {
       $(".carousel-servises").owlCarousel({
             loop:false,
             nav:true,
+            dots:false,
             smartSpeed:700,
             navText:['<i class="fa fa-angle-double-left"></i>','<i class="fa fa-angle-double-right"></i>'],
             responsiveClass:true,
@@ -45,6 +46,7 @@ $(document).ready(function() {
     }
       });
 
+
   function carouselServise(){
     $('.carousel-servises-item').each(function(){
       var ths = $(this),
@@ -59,5 +61,12 @@ $(document).ready(function() {
     var ths = $(this);
     ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
   });
+
+//Resize window
+
+  function onResize(){
+    $('.carousel-servises-content').equalHeights();
+  }onResize();
+  window.onresize = function() {onResize()}
 
 });
