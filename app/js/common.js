@@ -19,8 +19,15 @@ $(document).ready(function() {
       	$('.hamburger').removeClass('is-active')
       });
 
+      
+      $(".carousel-servises").on('initialized.owl.carousel', function(){
+        setTimeout(function(){
+           carouselServise()
+        }, 100);
+      });
+
       $(".carousel-servises").owlCarousel({
-            loop:true,
+            loop:false,
             nav:true,
             smartSpeed:700,
             navText:['<i class="fa fa-angle-double-left"></i>','<i class="fa fa-angle-double-right"></i>'],
@@ -37,5 +44,20 @@ $(document).ready(function() {
             }
     }
       });
+
+  function carouselServise(){
+    $('.carousel-servises-item').each(function(){
+      var ths = $(this),
+          thsh = ths.find('.carousel-servises-content').outerHeight();
+          ths.find('.carousel-servises-image').css('min-height', thsh);
+    });
+  }
+  carouselServise();
+
+
+  $('.carousel-servises-composition .h3').each(function(){
+    var ths = $(this);
+    ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
+  });
 
 });
