@@ -31,6 +31,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/owl/owl.carousel.min.js',
 		'app/libs/equalHeights/jquery.equalheights.js',
 		'app/libs/fotorama/fotorama.js',
+		'app/libs/selectize/js/standalone/selectize.min.js',
 		'app/js/common.min.js',
 		])
 	.pipe(concat('scripts.min.js'))

@@ -20,10 +20,10 @@
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	//color: #666
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	//color: #666
 
 html, body
 	height: 100%
@@ -79,6 +79,13 @@ section
 	&.inverse
 		color: #fff
 		background-color: $dark
+	.h2
+		font-size: 30px
+		font-weight: 800
+		color: $accent
+		span
+			color: #fff
+
 
 .img-responsive
 	display: block
@@ -178,7 +185,6 @@ html .mm-opened
 .mm-panels > .mm-panel > .mm-listview:first-child, 
 .mm-panels > .mm-panel > .mm-navbar + .mm-listview
 	margin-top: 0
-
 
 .header-flex
 	display: flex
@@ -365,7 +371,164 @@ $colors: $blue, $red, $accent
 	.owl-item
 		backface-visibility: inherit
 
+.s
+	&-king, &-review, &-partners
+		padding: 5% 0
+	&-king
+		p
+			margin: 30px 0
+			font-size: 18px
+	&-call
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: 35%
+		&.inverse
+			background-color: #fff
+		&::before
+			content: ''
+			width: 50%
+			right: 0
+			height: 100%
+			position: absolute
+			background-color: rgba($accent, .96)
+		
 
+.section-overlay
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($over, .9)
+
+
+.fotorama
+	background-color: rgba($dark, .4)
+	&__nav
+		&-wrap
+			position: absolute
+			bottom: 10px
+			padding: 0 30px
+			width: 100%
+	&__thumb
+		border: 4px solid #fff
+		transition: border-color .5s ease
+		&-border
+			border-color: #3d3c3c
+	&__nav:after, 
+	&__stage:after,
+	&__nav:before, 
+	&__stage:before
+		display: none
+
+	&__arr-
+		&-prev, &-next
+			&::before
+				font-family: fontawesome
+				font-size: 32px
+		&-next
+			top: 45%
+			&::before
+				content: '\f105'
+		&-prev
+			left: 20px
+			top: 45%
+			&::before
+				content: '\f104'
+	&__active
+		.fotorama__thumb
+			border-color: #3d3c3c
+
+input, textarea, select,
+.selectize-control .selectize-input,
+.selectize-control.single .selectize-input.input-active
+	background-color: transparent
+	border: rgba(#000, .1) 1px solid
+	border-bottom: rgba(#000, .1) 2px solid
+	outline: none
+	border-radius: 2px
+	padding: 8px 22px
+	display: inline-block
+	font-size: 16px
+	color: #333
+
+.selectize-control .selectize-input
+	box-shadow: none
+	margin-top: 20px
+	overflow: inherit
+	line-height: inherit
+	text-align: left
+	input
+		font-size: 16px
+	&.dropdown-active
+		&::before
+			background-color: transparent
+select
+	padding: 10px 22px
+
+.success
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: 600
+	z-index: 10
+	span
+		margin: auto
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
+
+.callback
+	padding: 25% 0
+	position: relative
+	&-logo
+		img
+			width: 100px
+			height: auto
+	.formhead
+		margin-top: 0
+		color: #fff
+	p
+		margin-top: 0
+	input, textarea, select
+		width: 100%
+		margin-top: 17px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		&::-webkit-input-placeholder
+			color: #fff
+		&::-moz-placeholder
+			color: #fff
+			opacity: 1
+		&::-ms-input-placeholder
+			color: #fff
+		option
+			color: #333
+	.select-wrap
+		position: relative
+		&::after
+			content: '\f107'
+			position: absolute
+			right: 15px
+			top: 15px
+			color: rgba(#000, .4)
+			font-family: fontawesome
+			font-size: 32px
+			z-index: 0
+	select
+		color: #fff
+	.button
+		margin-top: 40px
 
 
 @import "media"
