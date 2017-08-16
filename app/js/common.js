@@ -44,7 +44,15 @@ $(document).ready(function() {
               1100:{
                   items:3
             }
-    }
+            }
+        });
+
+      $(".reviews").owlCarousel({
+        items:1,
+        loop:true,
+        smartSpeed:700,
+        nav:false,
+        
       });
 
 
