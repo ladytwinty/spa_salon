@@ -394,7 +394,13 @@ $colors: $blue, $red, $accent
 			height: 100%
 			position: absolute
 			background-color: rgba($accent, .96)
-		
+	&-partners.section-overlay
+		&::before
+			background-color: rgba(#fff, .8)
+		.h2
+			margin-top: 0
+			span
+				color: $accent
 
 .section-overlay
 	&::before
@@ -561,12 +567,17 @@ select
 	&-date
 		font-family: 'Times New Roman', serif
 		font-style: italic
-		margin-top: 5px
 		font-size: 16px
 		color: #888
 	&-stars
-		margin: 20px
+		margin: 20px 0 30px
 		color: $accent
+		font-size: 14px
+		.fa
+			margin: 0 2px
+	&-text
+		color: #95989A
+
 
 .quotes
 	position: absolute
@@ -575,7 +586,7 @@ select
 	&::before
 		content: ',,'
 		position: absolute
-		top: 72px
+		top: 158px
 		color: $accent
 		font-size: 56px
 		font-family: 'Times New Roman', serif
@@ -585,11 +596,76 @@ select
 		display: block
 	&::before
 		left: -40px
-		top: 110px
+		top: 192px
 	&::after
 		right: -60px
 		transform: rotate(0)
 
 
+.partners
+	.partner
+		height: 100%
+		display: flex
+		margin: auto
+	.owl-stage
+		display: flex
+	.owl-item
+		margin-top: 30px
+		img
+			max-width: 100%
+			width: auto
+			display: inline-block
+			margin: auto
+	.owl-nav
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 2
+		> div
+			position: absolute
+			top: 50px
+			color: #999
+			font-size: 30px
+			transition: opacity .5s ease
+			padding: 0 10px
+			&:hover
+				opacity: .6
+			&.owl-prev
+				left: -60px
+			&.owl-next
+				right: -60px
+
+.main-footer
+	background-color: #242424
+	padding: 3% 0
+	color: #fff
+	font-size: 14px
+
+.footer-column
+	margin: 15px 0
+	p
+		position: relative
+		font-size: 15px
+
+.logo-footer
+	width: 125px
+	height: auto
+	+ p
+		color: #666
+		padding: 0
+		margin: 15px 0
+		font-size: 14px
+.social-footer
+	margin-top: 35px
+	.soc
+		li
+			display: inline-block
+			margin: 3px
+			a
+				color: #ababab
+				margin-bottom: 0
+				transition: color .5s ease, background-color .5s ease
+				&:hover
+					color: rgba(#000,.8)
 
 @import "media"

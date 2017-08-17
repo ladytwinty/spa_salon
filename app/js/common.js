@@ -52,8 +52,32 @@ $(document).ready(function() {
         loop:true,
         smartSpeed:700,
         nav:false,
-        
+        autoHeight:true
       });
+
+       $(".partners").owlCarousel({
+        items:4,
+        navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+        smartSpeed:700,
+        dots:false,
+        nav:true,
+        loop:true,
+        responsiveClass:true,
+            responsive:{
+              0:{
+                  items:2
+              },
+              767:{
+                  items:3
+              },
+              991:{
+                  items:4
+              },
+              1199:{
+                  items:4
+              }
+            }
+       });
 
 
   function carouselServise(){
